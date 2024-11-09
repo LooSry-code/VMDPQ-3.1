@@ -10,7 +10,7 @@ router.get("/products", productsController.findAll);
 router.post("/products", productsController.create);
 router.get("/products/:id", productsController.findOne);
 router.put("/products/:id", productsController.update);
-router.delete("/products/:id", productsController.delete);
+router.delete("/products/:id", productsController.remove);
 
 router.post("/upload", uploadMiddleware.single, uploadController.single);
 router.post("/uploads", uploadMiddleware.multiple, uploadController.multiple);
@@ -23,3 +23,5 @@ router.delete("/categories/:id", categoriesController.delete);
 
 
 export default router;
+
+
